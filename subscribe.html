@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Subscribe</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href= "css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="adventures.js"></script>
+	<style>
+	
+	</style>
+</head>
+
+<body>
+
+	<!-- Nav Bar -->
+	<div class = "container-fluid" id="navBar">
+		<!-- Nav Bar is added dynamically by navBarCreate().
+			To alter nav bar, change navBarCreate() in adventures.js -->
+		<script>navBarCreate();</script>
+	</div>
+	<br>
+	<div class = "container">
+		<h3>Subscribe</h3>
+		<h5>Leave your email to get updates on new adventures as soon as they happen.</h5>
+		<br>
+		<form>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+				<input id="email" type="text" class="form-control" name="email" placeholder="Email">
+			</div>
+		</form>
+		<br>
+		<button class = "btn btn-primary" onclick="subscribeSubmit()">Submit</button>
+	</div>
+	
+</body>
+
+</html>

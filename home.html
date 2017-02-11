@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Front Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href= "css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="adventures.js"></script>
+	<style>
+	
+	</style>
+</head>
+
+<body>
+		
+	<!-- Nav Bar -->
+	<div class = "container-fluid" id="navBar">
+		<!-- Nav Bar is added dynamically by navBarCreate().
+			To alter nav bar, change navBarCreate() in adventures.js -->
+		<script>navBarCreate();</script>
+	</div>
+	
+	<div class = "jumbotron text-center" style="background-image: pic6">
+		<h1>Adventure Time</h1>
+		<h3>One month, four countries</h3>
+	</div>
+	
+	
+	<!-- Carousel -->
+	<div class="container">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			  <li data-target="#myCarousel" data-slide-to="1"></li>
+			  <li data-target="#myCarousel" data-slide-to="2"></li>
+			  <li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<a href="#">
+					<img src="irelandCara.jpg" alt="Ireland">
+					<div class="carousel-caption">
+						<h3>Ireland</h3>
+						<p>Click to view more</p>
+					</div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a href="#">
+					<img src="scotlandCara.jpg" alt="Scotland">
+					<div class="carousel-caption">
+						<h3>Scotland</h3>
+						<p>Click to view more</p>
+					</div>
+					</a>
+				</div>
+			
+				<div class="item">
+					<a href="#">
+					<img src="englandCara.jpg" alt="England">
+					<div class="carousel-caption">
+						<h3>England</h3>
+						<p>Click to view more</p>
+					</div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a href="#">
+					<img src="portugalCara.jpg" alt="Portugal">
+					<div class="carousel-caption">
+						<h3>Portugal</h3>
+						<p>Click to view more</p>
+					</div>
+					</a>
+				</div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+	
+	<!-- columns -->
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-4">
+				<h3>The beginning of a web page</h3>
+				<p>What am i doing</p>
+			</div>
+			<div class = "col-md-4">
+				<h3>The beginning of a web page</h3>
+				<p>What am i doing</p>
+			</div>
+			<div class = "col-md-4">
+				<h3>The beginning of a web page</h3>
+				<p>What am i doing</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
