@@ -7,41 +7,54 @@
 	<link href= "css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="adventures.js"></script>
 	<style>
 	
 	</style>
+	
+	<!-- Scripts -->
+	<script>
+		
+	</script>
+	
 </head>
 
 <body>
-	<div class="jumbotron text-center">
-		<h1>Comments</h1>
-	</div>
-
 	<!-- Nav Bar -->
-	<div class = "container">
-		<div class="col-md-12">
-			<nav class = "navbar navbar-default">
-				<ul class = "nav navbar-nav">
-					<li><a href="home.html">Home</a></li>
-					<li><a href="aboutMe.html">About Me</a></li>
-					<li><a href="trip.html">About the Trip</a></li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Countries
-						<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="ireland.html">Ireland</a></li>
-							<li><a href="scotland.html">Scotland</a></li>
-							<li><a href="england.html">England</a></li>
-							<li><a href="portugal.html">Portugal</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="comment.html">Comment</a></li>
-					<li><a href="subscribe.html" style="padding-right:30px">Subscribe</a></li>
-				</ul>
-			</nav>
+	<div class = "container-fluid" id="navBar">
+		<!-- Nav Bar is added dynamically by navBarCreate().
+			To alter nav bar, change navBarCreate() in adventures.js -->
+		<script>navBarCreate();</script>
+	</div>
+	
+	<div class = "container" id="pageContainer">
+	
+		<!--text -->
+		<h3>Let us know how we did!</h3>
+		<p>Did you enjoy the website? Have some tips or suggestions for the website? Maybe you just really liked a photo. Let us know below!</p>
+
+		<!-- inputs -->
+		<div class = "container">
+			<div class = "col-md-4">
+			</div>
+			<div class = "col-md-4">
+			</div>
+			<div class = "col-md-4">
+			</div>
 		</div>
+		
+		<!-- comment box -->
+		<div class = "form-group">
+			<label for ="comment">Comment:</label>
+			<textarea class ="form-control" rows="5" id="comment"></textarea>
+			<br>
+			<button type = "submit" class = "btn btn-primary" value="Submit Button" onclick="commentThank()">Submit</button>
+		</div>
+		<div>
+		<br>
+			<p id="hiddenBox" ></p>
+		</div>
+	
 	</div>
 </body>
 
