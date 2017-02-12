@@ -12,7 +12,7 @@ function submitMessage(){
 		
 		function navBarCreate(){
 			document.getElementById("navBar").innerHTML=''+
-			'<nav class = "navbar navbar-default">'+
+			'<nav class = "navbar navbar-default" style="margin-bottom:0">'+
 				'<ul class = "nav navbar-nav">'+
 					'<li><a href="home.html">Home</a></li>'+
 					'<li><a href="aboutMe.html">About Me</a></li>'+
@@ -36,11 +36,18 @@ function submitMessage(){
 			'</nav>';
 		}
 		
+		
 		function commentThank(){
 			document.getElementById("pageContainer").innerHTML=''+
 			'<div class="container">'+
 			'<br>'+
 			'<h3 style="text-align: center;">Thank you for your feedback</h3>'+
 			'<p style="text-align: center;">You will be redirected shortly</p>'+
+			'<p style="text-align: center;">(You can also click <a href="home.html">here</a> to go to the home page)</p>'+
 			'</div>';
+			homeRedirect();
+		}
+		
+		function homeRedirect(){
+			setTimeout("location.href = 'home.html';",3000)
 		}
