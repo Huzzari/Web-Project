@@ -17,7 +17,8 @@ function submitMessage(){
 					'<li><a href="home.html">Home</a></li>'+
 					'<li><a href="aboutMe.html">About Me</a></li>'+
 					'<li><a href="trip.html">About the Trip</a></li>'+
-					'<li><a href="brick1.html">Game</a></li>'+
+					'<li><a href="brickPage.html">Brick Game</a></li>'+
+					'<li><a href="pongPage.html">Pong Game</a></li>'+
 					'<li class="dropdown">'+
 						'<a class="dropdown-toggle" data-toggle="dropdown" href="#">Countries'+
 						'<span class="caret"></span></a>'+
