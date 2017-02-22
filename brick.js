@@ -1,45 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Game Page</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href= "css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="adventures.js"></script>
-	<style>
-		* {padding:0; margin:0;}
-		canvas {background: #eee; display: block; margin:0 auto;}
-	</style>
-</head>
-
-<body>
-		
-	<!-- Nav Bar -->
-	<div class = "container-fluid" id="navBar" style="margin:0px">
-		<!-- Nav Bar is added dynamically by navBarCreate().
-			To alter nav bar, change navBarCreate() in adventures.js -->
-		<script>navBarCreate();</script>
-	</div>
-	<p align="center" style="margin:0px">Use the left and right arrows on your keyboard to move the paddle</p>
-	<p align="center" style="margin:0px">Don't let the ball touch the ground</p>
-	<p align="center">Destroy all the bricks to win</p>
-	<canvas id="gameCanvas" width="480" height="320"></canvas>
-	<br>
-	<div class = container align="center">
-	<button class = "btn btn-success" onclick="setMyInterval()">Start Game</button>
-	<button class = "btn btn-primary" onclick="reloadPage()">Reset Game</button>
-	</div>
-	<script>
 		var canvas = document.getElementById("gameCanvas");
 		var context = canvas.getContext("2d");
 		
-		var notDone = true;
 		var score = 0;
-		var scoreColour = "#000000";
+		var scoreColour = "#0095DD";
 		var gameOverColour = "#FF2222";
-		var gameWinColour = "#00CC22";
 		
 		var ballColour = "#0095DD";
 		var ballRadius = 10;
@@ -64,21 +28,16 @@
 		var brickPadding = 10;
 		var brickOffsetTop = 30;
 		var brickOffsetLeft = 30;
-		var brickColour = "#00CC22";
+		var brickColour = "#0095DD";
 		var bricks = new Array(brickColCount);
 		bricksNotCreated=true;
 		var c;
 		var r;
 		
-		function reloadPage(){
-			document.location.reload();
-		}
-		
 		function gameOver(){
 			context.font="32px Arial";
 			context.fillStyle = gameOverColour;
 			context.fillText("Game Over!", 160, 180);
-			notDone=false;
 		}
 		
 		function drawScore(){
@@ -149,26 +108,17 @@
 			context.closePath();
 		}
 		
-		function gameSetup(){
-			createBricks();
+		function draw(){
+			context.clearRect(0,0,canvas.width, canvas.height);
+			if(bricksNotCreated){
+				createBricks();
+			}
+			collisionDetection();
 			drawBricks();
+			drawBall();
 			drawPaddle();
 			drawScore();
-		}
-		
-		function draw(){
-			if(notDone){
-				context.clearRect(0,0,canvas.width, canvas.height);
-				if(bricksNotCreated){
-					createBricks();
-				}
-				collisionDetection();
-				drawBricks();
-				drawBall();
-				drawPaddle();
-				drawScore();
-				ballHitCheck();
-			}
+			ballHitCheck();
 			
 			
 			
@@ -185,10 +135,7 @@
 		
 		function winCheck(){
 			if(score == (brickColCount* brickRowCount)){
-				context.font="32px Arial";
-				context.fillStyle = gameWinColour;
-				context.fillText("You Win!", 165, 180);
-				notDone=false;
+				alert("YOU WIN!");
 			}
 		}
 		
@@ -221,7 +168,9 @@
 				}
 				<!-- if ball misses the paddle, game over or lose a life -->
 				else{
-					gameOver();
+				gameOver();
+				<!-- alert("GAME OVER"); -->
+					<!-- document.location.reload(); --> 
 				}
 			}
 		}
@@ -249,7 +198,4 @@
 		}
 		document.addEventListener("keydown", keydownHandler, false);
 		document.addEventListener("keyup", keyupHandler, false);
-	</script>
-	
-</body>
-</html>
+		setMyInterval();
