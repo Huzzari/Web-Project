@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Brick Game Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href= "css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="adventures.js"></script>
+	<script src="pong.js"></script>
+
+	<style>
+		* {padding:0; margin:0;}
+		canvas {background: #eee; display: block; margin:0 auto;}
+	</style>
+</head>
+
+<body onload="initializeGame()">
+		
+	<!-- Nav Bar -->
+	<div class = "container-fluid" id="navBar" style="margin:0px">
+		<!-- Nav Bar is added dynamically by navBarCreate().
+			To alter nav bar, change navBarCreate() in adventures.js -->
+		<script>navBarCreate();</script>
+	</div>
+	<p align="center" style="margin:0px">Use the left and right arrows on your keyboard to move the paddle</p>
+	<p align="center" style="margin:0px">Don't let the ball touch the ground</p>
+	<p align="center">Destroy all the bricks to win</p>
+	<canvas id="gameCanvas" width="480" height="320"></canvas>
+	<br>
+	<div class = container align="center">
+	<button class = "btn btn-success" onclick="setMyInterval()">Start Game</button>
+	<button class = "btn btn-primary" onclick="reloadPage()">Reset Game</button>
+	</div>
+	<script type="text/javascript" src="brick.js">
+	
+	</script>
+	
+</body>
+</html>
