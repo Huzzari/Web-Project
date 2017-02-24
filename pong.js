@@ -27,7 +27,7 @@ var ballRadius = 10;
 var xBall = canvas.width/2;
 var yBall = canvas.height/2;
 var xVelocity = 2;
-var yVelocity = -2;
+var yVelocity = -3;
 var changeX = 0;
 var lastPlayer = 2;
 
@@ -81,7 +81,7 @@ function drawScore(){
 	context.beginPath();
 	context.rect(0, (canvas.height/2)-1, canvas.width, 2);
 	context.fillStyle = midLineColour;
-	context.fill()
+	context.fill();
 	context.closePath();
 	
 	//draw P1 Score

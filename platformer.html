@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Platformer Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href= "css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="adventures.js"></script>
+	<style>
+		* {padding:0; margin:0;}
+		canvas {background: #eee; display: block; margin:0 auto;}
+	</style>
+</head>
+
+<body>
+		
+	<!-- Nav Bar -->
+	<div class = "container-fluid" id="navBar" style="margin:0px">
+		<!-- Nav Bar is added dynamically by navBarCreate().
+			To alter nav bar, change navBarCreate() in adventures.js -->
+		<script>navBarCreate();</script>
+	</div>
+	<br>
+	<div class = "container-fluid">
+		<div class = "row">
+			<div class = "col-md-1">
+			</div>
+			<div class = "col-md-2" align = "center">
+				<h2 style = "color: green">Controls</h2>
+				<h4>Use the left arrow key to move left</h4>
+				<h4>Use the right arrow key to move right</h4>
+				<h4>Use the up arrow key to jump</h4>
+			</div>
+			<div class = "col-md-6">
+				<canvas id="gameCanvas" width="720" height="480"></canvas>
+			</div>
+			<div class = "col-md-2" align = "center">
+				<h2 style = "color: green">Instructions</h2>
+				<h4>Jump from platform to platform</h4>
+				<h4>If you fall off the platforms, you lose</h4>
+				<h4>Your score will increase the farther you go</h4>
+			</div>
+			<div class = "col-md-1">
+			</div>
+		</div>
+	</div>
+	<br>
+	<div align = "center">
+		<button class = "btn btn-success" onclick="start()">Start Game</button>
+		<button class = "btn btn-primary" onclick="reloadPage()">Reset Game</button>
+		<script type="text/javascript" src="platformer.js"></script>
+	</div>
+	
+</body>
+</html>
